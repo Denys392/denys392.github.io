@@ -13,6 +13,13 @@ declare global {
   }
 }
 
+type ContactFormModel = {
+  name: string | null;
+  email: string | null;
+  message: string | null;
+  company: string | null;
+};
+
 @Component({
   selector: 'app-contact',
   imports: [CommonModule, FormsModule],
@@ -30,7 +37,7 @@ export class Contact {
   error = false;
   errorMessage = '';
 
-  form = { name: '', email: '', message: '', company: '' };
+  form: ContactFormModel = { name: '', email: '', message: '', company: '' };
 
   sendMessage(contactForm: NgForm) {
     this.success = false;
@@ -60,9 +67,9 @@ export class Contact {
     this.contactService
       .sendMessage(
         {
-          name: this.form.name,
-          email: this.form.email,
-          message: this.form.message,
+          name: this.form.name ?? '',
+          email: this.form.email ?? '',
+          message: this.form.message ?? '',
           hcaptchaToken: token,
         },
         environment.web3formsAccessKey,
@@ -72,7 +79,15 @@ export class Contact {
         next: (res) => {
           if (res.success) {
             this.success = true;
-            contactForm.resetForm();
+
+            contactForm.resetForm({
+              name: '',
+              email: '',
+              message: '',
+              company: '',
+            });
+
+            this.form = { name: '', email: '', message: '', company: '' };
           } else {
             this.error = true;
             this.errorMessage = res.message ?? 'No se pudo enviar.';
