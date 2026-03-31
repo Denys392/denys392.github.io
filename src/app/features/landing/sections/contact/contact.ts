@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SiteService } from '../../../../core/services/site-service';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -9,7 +9,10 @@ import { environment } from '../../../../../environments/environment';
 
 declare global {
   interface Window {
-    hcaptcha?: { reset: () => void };
+    hcaptcha?: {
+      render: (container: HTMLElement, params: { sitekey: string }) => number;
+      reset: (widgetId?: number) => void;
+    };
   }
 }
 
@@ -26,7 +29,7 @@ type ContactFormModel = {
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
-export class Contact {
+export class Contact implements AfterViewInit {
   private siteService = inject(SiteService);
   private contactService = inject(ContactService);
 
@@ -38,6 +41,53 @@ export class Contact {
   errorMessage = '';
 
   form: ContactFormModel = { name: '', email: '', message: '', company: '' };
+
+  @ViewChild('captchaEl', { static: false })
+  captchaEl?: ElementRef<HTMLElement>;
+
+  private captchaWidgetId?: number;
+  private captchaIntervalId?: number;
+
+  ngAfterViewInit(): void {
+    this.mountCaptcha();
+  }
+
+  private mountCaptcha(): void {
+    const sitekey = '50b2fe65-b00b-4b9e-ad62-3ba471098be2';
+
+    const tryRender = () => {
+      const el = this.captchaEl?.nativeElement;
+      if (!el) return false;
+      if (!window.hcaptcha?.render) return false;
+
+      el.innerHTML = '';
+      this.captchaWidgetId = window.hcaptcha.render(el, { sitekey });
+      return true;
+    };
+
+    if (tryRender()) return;
+
+    this.captchaIntervalId = window.setInterval(() => {
+      if (tryRender() && this.captchaIntervalId) {
+        clearInterval(this.captchaIntervalId);
+        this.captchaIntervalId = undefined;
+      }
+    }, 100);
+
+    window.setTimeout(() => {
+      if (this.captchaIntervalId) {
+        clearInterval(this.captchaIntervalId);
+        this.captchaIntervalId = undefined;
+      }
+    }, 5000);
+  }
+
+  private getCaptchaToken(): string {
+    return (
+      (document.querySelector('[name="h-captcha-response"]') as HTMLTextAreaElement | null)
+        ?.value ?? ''
+    );
+  }
 
   sendMessage(contactForm: NgForm) {
     this.success = false;
@@ -53,9 +103,7 @@ export class Contact {
       return;
     }
 
-    const token = (document.querySelector('[name="h-captcha-response"]') as HTMLInputElement | null)
-      ?.value;
-
+    const token = this.getCaptchaToken();
     if (!token) {
       this.error = true;
       this.errorMessage = 'Completa el captcha para poder enviar.';
@@ -93,13 +141,14 @@ export class Contact {
             this.errorMessage = res.message ?? 'No se pudo enviar.';
           }
 
-          window.hcaptcha?.reset?.();
+          window.hcaptcha?.reset?.(this.captchaWidgetId);
         },
         error: (err) => {
           console.error('Web3Forms error:', err?.error ?? err);
           this.error = true;
           this.errorMessage = err?.error?.message ?? 'Error de red o servidor.';
-          window.hcaptcha?.reset?.();
+
+          window.hcaptcha?.reset?.(this.captchaWidgetId);
         },
       });
   }
