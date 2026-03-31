@@ -1,0 +1,13 @@
+{
+  "name": "Denys",
+  "description": "Desarrollador Backend con experiencia en Angular, NestJS y bases de datos. Apasionado por crear soluciones eficientes y escalables.",
+  "role": "Backend Developer",
+  "location": "Perú",
+  "headline": "Construyo interfaces modernas con Angular.",
+  "email": "tuemail@correo.com",
+  "social": {
+    "github": "https://github.com/Denys392",
+    "linkedin": "https://www.linkedin.com/in/denys-chafloque-neciosup",
+    "cv": "assets/files/CV-Denys.pdf"
+  }
+}

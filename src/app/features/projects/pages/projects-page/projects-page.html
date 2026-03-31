@@ -1,0 +1,16 @@
+<main class="section">
+  <div class="container-page">
+    <h1 class="section-title">Todos los proyectos</h1>
+    <p class="section-subtitle">Listado completo de mis proyectos.</p>
+
+    @if (projects().length > 0) {
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        @for (p of projects(); track p.slug) {
+          <app-project-card [project]="p"></app-project-card>
+        }
+      </div>
+    } @else {
+      <p class="mt-6 text-slate-600">Sin proyectos</p>
+    }
+  </div>
+</main>

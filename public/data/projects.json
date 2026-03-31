@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "my-portfolio",
+    "title": "Mi Portafolio",
+    "featured": true,
+    "order": 1,
+    "descriptionShort": "Portafolio personal con Angular.",
+    "descriptionFull": "Mi portafolio personal con proyectos y habilidades.",
+    "technologies": ["angular", "javascript", "typescript", "tailwind", "git", "json", "github"],
+    "problem": "Necesitaba mostrar mis proyectos de forma clara.",
+    "solution": "Landing con secciones y detalle por proyecto.",
+    "links": { "demo": "https://denys392.github.io/", "repo": "https://github.com/Denys392/denys392.github.io" },
+    "cover": "portfolio-image1.png",
+    "images": ["portfolio-image2.png"]
+  }
+]

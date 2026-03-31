@@ -1,0 +1,133 @@
+<nav class="relative">
+  <div class="hidden md:flex items-center gap-1">
+    <a
+      class="text-slate-800 hover:text-slate-600 px-3 py-2 rounded-md text-sm font-medium hover:underline"
+      [routerLink]="['/']"
+      fragment="home"
+    >
+      Inicio
+    </a>
+
+    <a
+      class="text-slate-800 hover:text-slate-600 px-3 py-2 rounded-md text-sm font-medium hover:underline"
+      [routerLink]="['/']"
+      fragment="about"
+    >
+      Sobre mí
+    </a>
+
+    <a
+      class="text-slate-800 hover:text-slate-600 px-3 py-2 rounded-md text-sm font-medium hover:underline"
+      [routerLink]="['/']"
+      fragment="skills"
+    >
+      Skills
+    </a>
+
+    <a
+      class="text-slate-800 hover:text-slate-600 px-3 py-2 rounded-md text-sm font-medium hover:underline"
+      [routerLink]="['/']"
+      fragment="projects"
+    >
+      Proyectos
+    </a>
+
+    <a
+      class="text-slate-800 hover:text-slate-600 px-3 py-2 rounded-md text-sm font-medium hover:underline"
+      [routerLink]="['/']"
+      fragment="contact"
+    >
+      Contacto
+    </a>
+  </div>
+
+  <button
+    type="button"
+    class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-slate-800 shadow-sm hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+    (click)="toggle()"
+    [attr.aria-expanded]="open()"
+    aria-controls="mobile-menu"
+    aria-label="Abrir menú"
+  >
+    @if (!open()) {
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M4 6h16M4 12h16M4 18h16"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    } @else {
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M6 6l12 12M18 6L6 18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    }
+  </button>
+
+  @if (open()) {
+    <button
+      type="button"
+      class="fixed inset-0 z-40 bg-black/10"
+      (click)="close()"
+      aria-label="Cerrar menú"
+    ></button>
+
+    <div
+      id="mobile-menu"
+      class="absolute right-0 mt-3 z-50 w-56 overflow-hidden rounded-2xl border border-slate-200 bg-white/95 backdrop-blur shadow-lg"
+    >
+      <div class="p-2">
+        <a
+          class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+          [routerLink]="['/']"
+          fragment="home"
+          (click)="close()"
+        >
+          Inicio
+        </a>
+
+        <a
+          class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+          [routerLink]="['/']"
+          fragment="about"
+          (click)="close()"
+        >
+          Sobre mí
+        </a>
+
+        <a
+          class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+          [routerLink]="['/']"
+          fragment="skills"
+          (click)="close()"
+        >
+          Skills
+        </a>
+
+        <a
+          class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+          [routerLink]="['/']"
+          fragment="projects"
+          (click)="close()"
+        >
+          Proyectos
+        </a>
+
+        <a
+          class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+          [routerLink]="['/']"
+          fragment="contact"
+          (click)="close()"
+        >
+          Contacto
+        </a>
+      </div>
+    </div>
+  }
+</nav>

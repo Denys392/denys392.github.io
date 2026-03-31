@@ -1,0 +1,24 @@
+<section id="projects" class="section">
+  <div class="container-page">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="section-title">Proyectos destacados</h2>
+        <p class="section-subtitle">Mis proyectos más recientes y destacados.</p>
+      </div>
+
+      <a class="btn-ghost shrink-0" [routerLink]="['/projects']">
+        Ver todos
+      </a>
+    </div>
+
+    @if (projects().length > 0) {
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        @for (project of projects(); track project.slug) {
+          <app-project-card [project]="project"></app-project-card>
+        }
+      </div>
+    } @else {
+      <p class="mt-6 text-slate-600">Sin proyectos</p>
+    }
+  </div>
+</section>

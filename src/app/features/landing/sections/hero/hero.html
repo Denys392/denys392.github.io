@@ -1,0 +1,33 @@
+<section id="home" class="py-16 sm:py-20 lg:py-28">
+  <div class="container-page">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <h1 class="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900">
+        Hola, soy <span class="text-blue-600">{{ profile()?.author }}</span>
+      </h1>
+
+      <p class="mt-5 text-slate-600 leading-relaxed">
+        {{ profile()?.description }}
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a [routerLink]="['/']" fragment="projects" class="btn-primary">Ver proyectos</a>
+
+        @if (profile()?.contact?.cv?.link) {
+          <a [href]="profile()?.contact?.cv?.link" target="_blank" rel="noreferrer" class="btn-ghost">
+            Descargar CV
+          </a>
+        }
+      </div>
+
+      <div class="mt-8 flex justify-center gap-5 text-sm">
+        @if (profile()?.contact?.github?.link) {
+          <a [href]="profile()?.contact?.github?.link" target="_blank" rel="noreferrer" class="link">GitHub</a>
+        }
+        @if (profile()?.contact?.linkedin?.link) {
+          <a [href]="profile()?.contact?.linkedin?.link" target="_blank" rel="noreferrer" class="link">LinkedIn</a>
+        }
+      </div>
+    </div>
+  </div>
+</section>

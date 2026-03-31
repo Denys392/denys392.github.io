@@ -1,0 +1,410 @@
+[
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "icon": "https://cdn.simpleicons.org/javascript/F7DF1E",
+    "color": "#F7DF1E"
+  },
+  {
+    "id": "json",
+    "name": "JSON",
+    "icon": "https://cdn.simpleicons.org/json/000000",
+    "color": "#000000"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "icon": "https://cdn.simpleicons.org/typescript/3178C6",
+    "color": "#3178C6"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "icon": "https://cdn.simpleicons.org/python/3776AB",
+    "color": "#3776AB"
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    "color": "#007396"
+  },
+  {
+    "id": "csharp",
+    "name": "C#",
+    "icon": "https://cdn.simpleicons.org/csharp/239120",
+    "color": "#239120"
+  },
+  {
+    "id": "cpp",
+    "name": "C++",
+    "icon": "https://cdn.simpleicons.org/cplusplus/00599C",
+    "color": "#00599C"
+  },
+  {
+    "id": "c",
+    "name": "C",
+    "icon": "https://cdn.simpleicons.org/c/A8B9CC",
+    "color": "#A8B9CC"
+  },
+  {
+    "id": "php",
+    "name": "PHP",
+    "icon": "https://cdn.simpleicons.org/php/777BB4",
+    "color": "#777BB4"
+  },
+  {
+    "id": "go",
+    "name": "Go",
+    "icon": "https://cdn.simpleicons.org/go/00ADD8",
+    "color": "#00ADD8"
+  },
+  {
+    "id": "rust",
+    "name": "Rust",
+    "icon": "https://cdn.simpleicons.org/rust/000000",
+    "color": "#000000"
+  },
+  {
+    "id": "swift",
+    "name": "Swift",
+    "icon": "https://cdn.simpleicons.org/swift/F05138",
+    "color": "#F05138"
+  },
+  {
+    "id": "kotlin",
+    "name": "Kotlin",
+    "icon": "https://cdn.simpleicons.org/kotlin/7F52FF",
+    "color": "#7F52FF"
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby",
+    "icon": "https://cdn.simpleicons.org/ruby/CC342D",
+    "color": "#CC342D"
+  },
+  {
+    "id": "dart",
+    "name": "Dart",
+    "icon": "https://cdn.simpleicons.org/dart/0175C2",
+    "color": "#0175C2"
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "icon": "https://cdn.simpleicons.org/mysql/4479A1",
+    "color": "#4479A1"
+  },
+  {
+    "id": "html5",
+    "name": "HTML5",
+    "icon": "https://cdn.simpleicons.org/html5/E34F26",
+    "color": "#E34F26"
+  },
+  {
+    "id": "css3",
+    "name": "CSS3",
+    "icon": "https://cdn.simpleicons.org/css3/1572B6",
+    "color": "#1572B6"
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "icon": "https://cdn.simpleicons.org/react/61DAFB",
+    "color": "#61DAFB"
+  },
+  {
+    "id": "angular",
+    "name": "Angular",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg",
+    "color": "#DD0031"
+  },
+  {
+    "id": "vue",
+    "name": "Vue.js",
+    "icon": "https://cdn.simpleicons.org/vuedotjs/4FC08D",
+    "color": "#4FC08D"
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "icon": "https://cdn.simpleicons.org/nextdotjs/000000",
+    "color": "#000000"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "icon": "https://cdn.simpleicons.org/nodedotjs/339933",
+    "color": "#339933"
+  },
+  {
+    "id": "express",
+    "name": "Express",
+    "icon": "https://cdn.simpleicons.org/express/000000",
+    "color": "#000000"
+  },
+  {
+    "id": "nestjs",
+    "name": "NestJS",
+    "icon": "https://cdn.simpleicons.org/nestjs/E0234E",
+    "color": "#E0234E"
+  },
+  {
+    "id": "django",
+    "name": "Django",
+    "icon": "https://cdn.simpleicons.org/django/092E20",
+    "color": "#092E20"
+  },
+  {
+    "id": "flask",
+    "name": "Flask",
+    "icon": "https://cdn.simpleicons.org/flask/000000",
+    "color": "#000000"
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI",
+    "icon": "https://cdn.simpleicons.org/fastapi/009688",
+    "color": "#009688"
+  },
+  {
+    "id": "spring",
+    "name": "Spring",
+    "icon": "https://cdn.simpleicons.org/spring/6DB33F",
+    "color": "#6DB33F"
+  },
+  {
+    "id": "spring-boot",
+    "name": "Spring Boot",
+    "icon": "https://cdn.simpleicons.org/springboot/6DB33F",
+    "color": "#6DB33F"
+  },
+  {
+    "id": "dotnet",
+    "name": ".NET",
+    "icon": "https://cdn.simpleicons.org/dotnet/512BD4",
+    "color": "#512BD4"
+  },
+  {
+    "id": "laravel",
+    "name": "Laravel",
+    "icon": "https://cdn.simpleicons.org/laravel/FF2D20",
+    "color": "#FF2D20"
+  },
+  {
+    "id": "rails",
+    "name": "Ruby on Rails",
+    "icon": "https://cdn.simpleicons.org/rubyonrails/CC0000",
+    "color": "#CC0000"
+  },
+  {
+    "id": "flutter",
+    "name": "Flutter",
+    "icon": "https://cdn.simpleicons.org/flutter/02569B",
+    "color": "#02569B"
+  },
+  {
+    "id": "react-native",
+    "name": "React Native",
+    "icon": "https://cdn.simpleicons.org/react/61DAFB",
+    "color": "#61DAFB"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "icon": "https://cdn.simpleicons.org/mongodb/47A248",
+    "color": "#47A248"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "icon": "https://cdn.simpleicons.org/postgresql/4169E1",
+    "color": "#4169E1"
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "icon": "https://cdn.simpleicons.org/mysql/4479A1",
+    "color": "#4479A1"
+  },
+  {
+    "id": "sqlite",
+    "name": "SQLite",
+    "icon": "https://cdn.simpleicons.org/sqlite/003B57",
+    "color": "#003B57"
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "icon": "https://cdn.simpleicons.org/redis/DC382D",
+    "color": "#DC382D"
+  },
+  {
+    "id": "firebase",
+    "name": "Firebase",
+    "icon": "https://cdn.simpleicons.org/firebase/FFCA28",
+    "color": "#FFCA28"
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "icon": "https://cdn.simpleicons.org/supabase/3FCF8E",
+    "color": "#3FCF8E"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "icon": "https://cdn.simpleicons.org/docker/2496ED",
+    "color": "#2496ED"
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes",
+    "icon": "https://cdn.simpleicons.org/kubernetes/326CE5",
+    "color": "#326CE5"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "icon": "https://cdn.simpleicons.org/git/F05032",
+    "color": "#F05032"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "color": "#000000"
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "icon": "https://cdn.simpleicons.org/gitlab/FC6D26",
+    "color": "#FC6D26"
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg",
+    "color": "#232F3E"
+  },
+  {
+    "id": "azure",
+    "name": "Azure",
+    "icon": "https://cdn.simpleicons.org/microsoftazure/0078D4",
+    "color": "#0078D4"
+  },
+  {
+    "id": "gcp",
+    "name": "Google Cloud",
+    "icon": "https://cdn.simpleicons.org/googlecloud/4285F4",
+    "color": "#4285F4"
+  },
+  {
+    "id": "terraform",
+    "name": "Terraform",
+    "icon": "https://cdn.simpleicons.org/terraform/7B42BC",
+    "color": "#7B42BC"
+  },
+  {
+    "id": "graphql",
+    "name": "GraphQL",
+    "icon": "https://cdn.simpleicons.org/graphql/E10098",
+    "color": "#E10098"
+  },
+  {
+    "id": "tailwind",
+    "name": "Tailwind CSS",
+    "icon": "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+    "color": "#06B6D4"
+  },
+  {
+    "id": "bootstrap",
+    "name": "Bootstrap",
+    "icon": "https://cdn.simpleicons.org/bootstrap/7952B3",
+    "color": "#7952B3"
+  },
+  {
+    "id": "sass",
+    "name": "Sass",
+    "icon": "https://cdn.simpleicons.org/sass/CC6699",
+    "color": "#CC6699"
+  },
+  {
+    "id": "redux",
+    "name": "Redux",
+    "icon": "https://cdn.simpleicons.org/redux/764ABC",
+    "color": "#764ABC"
+  },
+  {
+    "id": "webpack",
+    "name": "Webpack",
+    "icon": "https://cdn.simpleicons.org/webpack/8DD6F9",
+    "color": "#8DD6F9"
+  },
+  {
+    "id": "vite",
+    "name": "Vite",
+    "icon": "https://cdn.simpleicons.org/vite/646CFF",
+    "color": "#646CFF"
+  },
+  {
+    "id": "jest",
+    "name": "Jest",
+    "icon": "https://cdn.simpleicons.org/jest/C21325",
+    "color": "#C21325"
+  },
+  {
+    "id": "nginx",
+    "name": "Nginx",
+    "icon": "https://cdn.simpleicons.org/nginx/009639",
+    "color": "#009639"
+  },
+  {
+    "id": "linux",
+    "name": "Linux",
+    "icon": "https://cdn.simpleicons.org/linux/FCC624",
+    "color": "#FCC624"
+  },
+  {
+    "id": "tensorflow",
+    "name": "TensorFlow",
+    "icon": "https://cdn.simpleicons.org/tensorflow/FF6F00",
+    "color": "#FF6F00"
+  },
+  {
+    "id": "sqlserver",
+    "name": "SQL Server",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+    "color": "#CC2927"
+  },
+  {
+    "id": "pytorch",
+    "name": "PyTorch",
+    "icon": "https://cdn.simpleicons.org/pytorch/EE4C2C",
+    "color": "#EE4C2C"
+  },
+  {
+    "id": "elasticsearch",
+    "name": "Elasticsearch",
+    "icon": "https://cdn.simpleicons.org/elasticsearch/005571",
+    "color": "#005571"
+  },
+  {
+    "id": "rabbitmq",
+    "name": "RabbitMQ",
+    "icon": "https://cdn.simpleicons.org/rabbitmq/FF6600",
+    "color": "#FF6600"
+  },
+  {
+    "id": "kafka",
+    "name": "Apache Kafka",
+    "icon": "https://cdn.simpleicons.org/apachekafka/231F20",
+    "color": "#231F20"
+  },
+  {
+    "id": "jenkins",
+    "name": "Jenkins",
+    "icon": "https://cdn.simpleicons.org/jenkins/D24939",
+    "color": "#D24939"
+  }
+]

@@ -1,59 +1,103 @@
 # MyPortfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+Portafolio personal desarrollado con Angular para presentar proyectos, tecnologías y experiencia profesional.
 
-## Development server
+## Demo
 
-To start a local development server, run:
+- Repositorio: <https://github.com/Denys392/denys392.github.io>
+- Web: <https://denys392.github.io/>
+
+## Características
+
+- Landing page con secciones: **Hero**, **About**, **Skills**, **Projects Latest** y **Contact**.
+- Página de proyectos con listado completo.
+- Página de detalle por proyecto usando rutas dinámicas (`/projects/:slug`).
+- Datos desacoplados en archivos JSON dentro de `public/data`.
+- Formulario de contacto integrado con **Web3Forms** y captcha.
+- Página `Not Found` para rutas no válidas.
+- Un CSS adecuado para toda la página.
+
+## Stack técnico
+
+- Angular 21 (standalone components)
+- TypeScript
+- RxJS
+- Tailwind CSS 4
+- Vitest (unit testing)
+
+## Estructura principal
+
+
+src/
+	app/
+		core/
+			models/
+			services/
+		features/
+			landing/
+			projects/
+		layout/
+		shared/
+	environments/
+public/
+	data/
+	images/
+
+
+## Rutas
+
+- `/` → Landing
+- `/projects` → Lista de proyectos
+- `/projects/:slug` → Detalle de proyecto
+- `**` → Not Found
+
+## Configuración de contenido
+
+Edita los siguientes archivos para actualizar tu portafolio sin tocar componentes:
+
+- `public/data/site.json`: título, descripción, sección “about”, redes/contacto y proyectos visibles (`projectShow`).
+- `public/data/profile.json`: datos personales y enlaces sociales.
+- `public/data/projects.json`: catálogo de proyectos.
+- `public/data/technologies.json`: tecnologías disponibles.
+
+## Variables y claves
+
+Cambiar el nombre de environment.copy.ts a environment.ts
+
+La clave del formulario de Web3Forms se debe de colocar en environment.ts:
+- `src/environments/environment.ts`
+
+Campos actuales:
+
+- `web3formsAccessKey`
+
+
+## Desarrollo local
+
+### 1) Instalar dependencias
 
 ```bash
-ng serve
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 2) Levantar servidor
 
 ```bash
-ng generate component component-name
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Aplicación disponible en: <http://localhost:4200>
+
+## Build de producción
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+Salida en `dist/`.
 
-To build the project run:
+## Autor
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Denys Chafloque**
+- LinkedIn: <https://www.linkedin.com/in/denys-chafloque-neciosup>
+- GitHub: <https://github.com/Denys392>

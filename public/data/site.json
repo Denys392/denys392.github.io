@@ -1,0 +1,46 @@
+{
+    "title": "My Portfolio",
+    "author": "Denys Chafloque",
+    "description": "Bienvenido a mi portafolio, aquí encontrarás mis proyectos y tecnologías que manejo.",
+    "about": "Apasionado por la tecnología, disfruto aprender nuevas herramientas y enfrentar desafíos de desarrollo web. Mi fuerte es el backend, aunque también tengo experiencia en frontend y bases de datos. Me interesa crear aplicaciones que sean útiles, fáciles de usar y eficientes, evitando que el software se vuelva pesado innecesariamente.",
+    "projectShow": ["my-portfolio"],
+    "contact": {
+        "github": {
+            "name": "GitHub",
+            "link": "https://www.github.com/Denys392",
+            "urlIcon": "assets/images/technologies/GitHub_Invertocat_White.svg"
+        },
+        "linkedin": {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/denys-chafloque-neciosup",
+            "urlIcon": ""
+        }, 
+        "cv": {
+            "name": "CV",
+            "link": "assets/files/CV-DenysChafloqueNeciosup.pdf",
+            "urlIcon": ""
+        }
+    },
+    "skills": [
+        {
+            "name": "frontend",
+            "technologies": ["angular", "tailwind", "javascript", "html", "css"],
+            "color": "rgb(192 132 252 / var(--tw-text-opacity, 1))"
+        },
+        {
+            "name": "backend",
+            "technologies": ["php", "java", "spring-boot"],
+            "color": "rgb(252 132 132 / var(--tw-text-opacity, 1))"
+        },
+        {
+            "name": "databases",
+            "technologies": ["mysql", "sqlserver", "mongodb"],
+            "color": "rgb(132 252 132 / var(--tw-text-opacity, 1))"
+        },
+        {
+            "name": "otros",
+            "technologies": ["git", "github", "json"],
+            "color": "rgb(132 132 252 / var(--tw-text-opacity, 1))"
+        }
+    ]
+}

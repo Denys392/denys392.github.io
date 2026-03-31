@@ -1,3 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import 'tailwindcss';
+@reference "tailwindcss";
 
-@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  html {
+    background:
+      radial-gradient(1100px 520px at 12% 12%, rgba(59, 130, 246, 0.1), transparent 60%),
+      radial-gradient(1100px 520px at 88% 72%, rgba(16, 185, 129, 0.1), transparent 60%),
+      linear-gradient(to bottom, rgb(248, 250, 252), rgb(248, 250, 252));
+    background-attachment: fixed;
+  }
+
+  body {
+    font-family:
+      'Poppins',
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      Arial,
+      sans-serif;
+    @apply text-slate-800 antialiased;
+    background: transparent;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900;
+  }
+  .section-subtitle {
+    @apply mt-3 text-slate-600 max-w-2xl;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+  .card-pad {
+    @apply p-4 sm:p-6;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl text-sm font-medium transition;
+    @apply px-4 py-2.5 sm:px-5 sm:py-3;
+    @apply bg-slate-900 text-white hover:bg-slate-800;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl text-sm font-medium transition;
+    @apply px-4 py-2.5 sm:px-5 sm:py-3;
+    @apply border border-slate-300 text-slate-800 hover:border-slate-500 hover:bg-white;
+  }
+
+  .link {
+    @apply text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50;
+    @apply px-3 py-1 text-xs sm:text-sm;
+  }
+
+  .project-card {
+    @apply relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm;
+    @apply p-4 sm:p-5;
+    @apply transition hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .project-cta {
+    @apply inline-flex items-center gap-2 text-sm font-medium text-slate-800;
+    @apply underline decoration-slate-300 underline-offset-4 hover:text-slate-950;
+  }
+
+  .section-divider {
+    @apply border-t border-slate-200/70;
+  }
+
+  .section-soft {
+    @apply relative overflow-hidden;
+  }
+
+  .section-soft::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(600px 280px at 15% 20%, rgba(59, 130, 246, 0.08), transparent 60%),
+      radial-gradient(600px 280px at 85% 70%, rgba(16, 185, 129, 0.08), transparent 60%);
+  }
+
+  .section-soft > .container-page {
+    position: relative;
+  }
+}
